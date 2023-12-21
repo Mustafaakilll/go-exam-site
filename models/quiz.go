@@ -8,6 +8,7 @@ type Quiz struct {
 	Description string `gorm:"type:text" json:"description"`
 	TeacherID   int    `gorm:"not null" json:"teacher_id"`
 	Teacher     User   `gorm:"foreignKey:TeacherID" json:"teacher"`
+	LessonID    int    `gorm:"not null" json:"lesson_id"`
 
 	CreatedAt time.Time `gorm:"default:current_timestamp" json:"created_at"`
 	UpdatedAt time.Time `gorm:"default:current_timestamp" json:"updated_at"`

@@ -21,7 +21,7 @@ type User struct {
 	Username string `gorm:"not null" json:"username"`
 	Password string `gorm:"not null" json:"-"`
 	Email    string `gorm:"not null" json:"email"`
-	UserType string `gorm:"type:UserType;not null" json:"user_type"`
+	UserType string `gorm:"type:usertype;not null" json:"user_type"`
 
 	CreatedAt time.Time `gorm:"default:current_timestamp"`
 	UpdatedAt time.Time `gorm:"default:current_timestamp"`
