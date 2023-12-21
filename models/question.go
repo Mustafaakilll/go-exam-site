@@ -18,7 +18,7 @@ type Question struct {
 	QuestionID   int    `gorm:"primaryKey;autoIncrement" json:"question_id"`
 	QuizID       int    `gorm:"not null" json:"quiz_id"`
 	QuestionText string `gorm:"type:text;not null" json:"question_text"`
-	QuestionType string `gorm:"type:QuestionType;not null" json:"question_type"`
+	QuestionType int    `gorm:"not null" json:"question_type"`
 	Quiz         Quiz   `gorm:"foreignKey:QuizID" json:"quiz"`
 
 	CreatedAt time.Time `gorm:"default:current_timestamp"`
